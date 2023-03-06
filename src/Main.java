@@ -1,40 +1,63 @@
-import java.util.ArrayList;
+import Company.Employee;
+
 import java.util.Arrays;
 import java.util.List;
-import java.util.Optional;
+import java.util.function.BiFunction;
 import java.util.function.Function;
-import java.util.function.Supplier;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
+
+import static DoNotLookYet.Answers.getUniqueCompanies;
+import static DoNotLookYet.Answers.isEven;
+import static DoNotLookYet.Answers.concat;
+import static DoNotLookYet.Answers.streamFilterMapForEachTest;
+import static DoNotLookYet.Answers.testFilter;
+import static DoNotLookYet.Answers.testVarargs;
 
 public class Main
 {
 	public static void main(String[] args)
 	{
-//		System.out.println("Hello world!");
 
 		/**
-		 * Can you write a public static Functional interface that takes an int and returns if isEven?
+		 * Can you write a Functional interface that takes an int and returns if isEven?
 		 * Below should print false
 		 *
 		 */
 		System.out.println(isEven.apply(999));
 
+
+
+		/**
+		 * Write a function interface called concat that takes a string and an array of characters,
+		 * upper case the string,
+		 * concatenate all the characters
+		 * concatenate the string and the concatenated list
+		 * return the new string
+		 * Should print HELLO, world
+		 */
+
+		System.out.println(concat.apply("hello, ", List.of('w', 'o', 'r', 'l', 'd')));
+
+
+
+		/**###########################################################################################
+
 		/**** java.util.function has many functional interfaces that can be used in the future if needed ****/
+
+		/**##########################################################################################
 
 
 
 		/**
-		 * Given this array of integers, filter out the odd numbers using lambda expressions
-		 * Can you write it without using the same call as before?
-		 *
+		 * Given this array of integers, write a function called testFilter that
+		 * filter out the odd numbers using isEven from the previous example
 		 */
 		testFilter(Arrays.asList(1, 2, 2, 32, 3, 23, 23, 31, 231, 5234, 63745 ));
 
 
 		/**
 		 * using the stream, filter, map and foreach function, remove all the words shorter or equal to 3 characters,
-		 * convert the rest to upper case and print it out
+		 * convert the rest to upper case and print it out with a function called streamFilterMapForEachTest
 		 * Should print:
 		 * MOON
 		 * PLANET
@@ -45,7 +68,7 @@ public class Main
 		 * PLUTO
 		 */
 
-		List<String> stringList = List.of("moon", "sun", "planet", "eye", "s", "jupiter", "saturn", "andromida", "neptune", "pluto", "a");
+		streamFilterMapForEachTest(List.of("moon", "sun", "planet", "eye", "s", "jupiter", "saturn", "andromida", "neptune", "pluto", "a"));
 
 		/**
 		 * Write a static function that return a list of unique companies and print it out
@@ -91,34 +114,6 @@ public class Main
 
 
 	}
-
-	public static List<String> getUniqueCompanies(List<Employee> employees)
-	{
-		return employees.stream().map(employee -> employee.getCompany()).distinct().collect(Collectors.toList());
-	}
-
-	public static void streamFilterMapForEachTest(List<String> list)
-	{
-		list.stream()
-				.filter(string -> string.length() > 3)
-				.map(string -> string.toUpperCase())
-				.forEach(string -> System.out.println(string));
-
-	}
-
-	public static List<Integer> testFilter(List<Integer> list)
-	{
-		return list.stream().filter(n -> isEven.apply(n)).collect(Collectors.toList());
-	}
-
-	public static void testVarargs(String string, int... a)
-	{
-		System.out.println(string + Arrays.stream(a).sum());
-	}
-
-	public static Function<Integer, Boolean> isEven = (number) -> number % 2 == 0;
-
-	//java.util.function
 
 }
 
