@@ -6,12 +6,12 @@ import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-import static DoNotLookYet.Answers.getUniqueCompanies;
-import static DoNotLookYet.Answers.isEven;
-import static DoNotLookYet.Answers.concat;
-import static DoNotLookYet.Answers.streamFilterMapForEachTest;
-import static DoNotLookYet.Answers.testFilter;
-import static DoNotLookYet.Answers.testVarargs;
+//import static DoNotLookYet.Answers.getUniqueCompanies;
+//import static DoNotLookYet.Answers.isEven;
+//import static DoNotLookYet.Answers.concat;
+//import static DoNotLookYet.Answers.streamFilterMapForEachTest;
+//import static DoNotLookYet.Answers.testFilter;
+//import static DoNotLookYet.Answers.testVarargs;
 
 public class Main
 {
@@ -100,8 +100,6 @@ public class Main
 		getUniqueCompanies(employees).forEach(System.out::println);
 
 
-
-
 		/**
 		 * write a static function called testVarargs
 		 * that takes a string and a list of integers using only primitive type parameters
@@ -110,8 +108,6 @@ public class Main
 		 * Can you call the Functional interface implemented earlier?
 		 */
 		testVarargs("The sum is ", 1, 2, 3, 4, 5, 6);
-
-
 
 	}
 
