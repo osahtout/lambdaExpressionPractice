@@ -14,8 +14,19 @@ import java.util.List;
 public class Main
 {
 
+	/** A few practice problem below to hopefully help with lambda expression and functional interfaces
+	 	UNCOMMENT THE IF ELSE TO TEST YOUR FUNCTIONS **/
+
+
+
 
 	/** WRITE YOUR STATIC FUNCTION HERE **/
+
+
+
+
+
+	/** Static function end **/
 
 	public static void main(String[] args) throws Exception
 	{
