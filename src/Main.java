@@ -3,31 +3,16 @@ import Company.Employee;
 import java.util.Arrays;
 import java.util.List;
 
-//import static DoNotLookYet.Answers.getUniqueCompanies;
-//import static DoNotLookYet.Answers.isEven;
-//import static DoNotLookYet.Answers.concat;
-//import static DoNotLookYet.Answers.helloworld;
-//import static DoNotLookYet.Answers.streamFilterMapForEachTest;
-//import static DoNotLookYet.Answers.testFilter;
-//import static DoNotLookYet.Answers.testVarargs;
+import static DoNotLookYet.Answers.getUniqueCompanies;
+import static DoNotLookYet.Answers.isEven;
+import static DoNotLookYet.Answers.concat;
+import static DoNotLookYet.Answers.helloworld;
+import static DoNotLookYet.Answers.streamFilterMapForEachTest;
+import static DoNotLookYet.Answers.testFilter;
+import static DoNotLookYet.Answers.testVarargs;
 
 public class Main
 {
-
-	/** A few practice problem below to hopefully help with lambda expression and functional interfaces
-	 	UNCOMMENT THE IF ELSE TO TEST YOUR FUNCTIONS **/
-
-
-
-
-	/** WRITE YOUR STATIC FUNCTION HERE **/
-
-
-
-
-
-	/** Static function end **/
-
 	public static void main(String[] args) throws Exception
 	{
 
@@ -38,32 +23,17 @@ public class Main
 		 *
 		 */
 
-//		if(Boolean.TRUE.equals(isEven.apply(999))) {
-//			throw (new Exception(getErrorMessage(1)));
-//		}
-//		else{
-//			System.out.println(getCompletedMessage(1));
-//		}
-
-
-
-
-
-
-
+		if(Boolean.TRUE.equals(isEven.apply(999))) {
+			throw (new Exception(getErrorMessage(1)));
+		}
+		else{
+			System.out.println(getCompletedMessage(1));
+		}
 
 
 		/** ============================================================================= */
 		/** ============================================================================= */
 		/** ============================================================================= */
-
-
-
-
-
-
-
-
 
 
 
@@ -76,15 +46,12 @@ public class Main
 		 * Should return HELLO, world
 		 */
 
-
-//		if(!concat.apply("hello, ", List.of('w', 'o', 'r', 'l', 'd')).equals("HELLO, world")) {
-//			throw (new Exception(getErrorMessage(2)));
-//		}
-//		else {
-//			System.out.println(getCompletedMessage(2));
-//		}
-
-
+		if(!concat.apply("hello, ", List.of('w', 'o', 'r', 'l', 'd')).equals("HELLO, world")) {
+			throw (new Exception(getErrorMessage(2)));
+		}
+		else {
+			System.out.println(getCompletedMessage(2));
+		}
 
 		/**###########################################################################################
 
@@ -108,51 +75,35 @@ public class Main
 		 * 3.3 if the user specifies a number longer than the characters available add ! until the number is reached
 		 */
 
-//		if(!helloworld.apply(3).equals("Hel"))
-//		{
-//			throw (new Exception(getErrorMessage(3.1)));
-//		}
-//		else {
-//			System.out.println(getCompletedMessage(3.1));
-//		}
-//
-//		if(!helloworld.apply(-1).equals("-1"))
-//		{
-//			throw (new Exception(getErrorMessage(3.2)));
-//		}
-//		else {
-//			System.out.println(getCompletedMessage(3.2));
-//		}
-//
-//		if(!helloworld.apply(20).equals("Hello, world!!!!!!!!!!!!!!!!!!!!!"))
-//		{
-//			throw (new Exception(getErrorMessage(3.3)));
-//		}
-//		else {
-//			System.out.println(getCompletedMessage(3.3));
-//		}
+		if(!helloworld.apply(3).equals("Hel"))
+		{
+			throw (new Exception(getErrorMessage(3.1)));
+		}
+		else {
+			System.out.println(getCompletedMessage(3.1));
+		}
 
+		if(!helloworld.apply(-1).equals("-1"))
+		{
+			throw (new Exception(getErrorMessage(3.2)));
+		}
+		else {
+			System.out.println(getCompletedMessage(3.2));
+		}
 
-
-
-
-
-
+		if(!helloworld.apply(20).equals("Hello, world!!!!!!!!!!!!!!!!!!!!!"))
+		{
+			throw (new Exception(getErrorMessage(3.3)));
+		}
+		else {
+			System.out.println(getCompletedMessage(3.3));
+		}
 
 
 
 		/** ============================================================================= */
 		/** ============================================================================= */
 		/** ============================================================================= */
-
-
-
-
-
-
-
-
-
 
 
 
@@ -161,119 +112,81 @@ public class Main
 		 * filter out the odd numbers using isEven from the previous example
 		 */
 
-//		final List<Integer> filtered = testFilter(Arrays.asList(1, 2, 2, 32, 3, 23, 23, 31, 231, 5234, 63745));
-//
-//		if(Arrays.equals(expected.toArray(), filtered.toArray()))
-//		{
-//			System.out.println(getCompletedMessage(4));
-//		}
-//		else
-//		{
-//			throw (new Exception(getErrorMessage(4)));
-//		}
+		final List<Integer> filtered = testFilter(Arrays.asList(1, 2, 2, 32, 3, 23, 23, 31, 231, 5234, 63745));
 
-
-
-
-
-
+		if(Arrays.equals(expected.toArray(), filtered.toArray()))
+		{
+			System.out.println(getCompletedMessage(4));
+		}
+		else
+		{
+			throw (new Exception(getErrorMessage(4)));
+		}
 
 
 
 		/** ============================================================================= */
 		/** ============================================================================= */
 		/** ============================================================================= */
-
-
-
-
-
-
-
-
 
 
 		/** 5.0
-		 * using the stream, filter, map and foreach function, remove all the words shorter or equal to 3 characters,
+		 * using the stream, filter, map and collect function, remove all the words shorter or equal to 3 characters,
 		 * convert the rest to upper case and return it out with a function called streamFilterMapForEachTest
 		 */
 
-//		final List<String> manipulatedString = streamFilterMapForEachTest(
-//				List.of("moon", "sun", "planet", "eye", "s", "jupiter", "saturn", "andromida", "neptune", "pluto", "a"));
-//
-//		if(Arrays.equals(expectedList.toArray(), manipulatedString.toArray()))
-//		{
-//			System.out.println(getCompletedMessage(5));
-//		}
-//		else
-//		{
-//			throw (new Exception(getErrorMessage(5)));
-//		}
+		final List<String> manipulatedString = streamFilterMapForEachTest(
+				List.of("moon", "sun", "planet", "eye", "s", "jupiter", "saturn", "andromida", "neptune", "pluto", "a"));
 
-
-
-
-
+		if(Arrays.equals(expectedList.toArray(), manipulatedString.toArray()))
+		{
+			System.out.println(getCompletedMessage(5));
+		}
+		else
+		{
+			throw (new Exception(getErrorMessage(5)));
+		}
 
 
 		/** ============================================================================= */
 		/** ============================================================================= */
 		/** ============================================================================= */
-
-
-
-
-
-
-
-
-
 
 
 		/** 6.0
 		 * Write a static function that return a list of unique companies and print it out
 		 */
-//		List<Employee> employees = List.of(
-//				new Employee("Bob", sap),
-//				new Employee("Joe", apple),
-//				new Employee("Joe", microsoft),
-//				new Employee("Joe", microsoft),
-//				new Employee("Joe", amazon),
-//				new Employee("Joe", apple),
-//				new Employee("Bob", sap),
-//				new Employee("Joe", apple),
-//				new Employee("Joe", amazon),
-//				new Employee("Bob", sap),
-//				new Employee("Joe", apple),
-//				new Employee("Joe", sap),
-//				new Employee("Joe", amazon),
-//				new Employee("Joe", apple),
-//				new Employee("Joe", microsoft));
-//
-//		final List<String> uniqueCompanies = getUniqueCompanies(employees);
-//
-//		if(Arrays.equals(expectedUniqueCompanies.toArray(), uniqueCompanies.toArray()))
-//		{
-//			System.out.println(getCompletedMessage(6));
-//		}
-//		else
-//		{
-//			throw (new Exception(getErrorMessage(5)));
-//		}
+		List<Employee> employees = List.of(
+				new Employee("Bob", sap),
+				new Employee("Joe", apple),
+				new Employee("Joe", microsoft),
+				new Employee("Joe", microsoft),
+				new Employee("Joe", amazon),
+				new Employee("Joe", apple),
+				new Employee("Bob", sap),
+				new Employee("Joe", apple),
+				new Employee("Joe", amazon),
+				new Employee("Bob", sap),
+				new Employee("Joe", apple),
+				new Employee("Joe", sap),
+				new Employee("Joe", amazon),
+				new Employee("Joe", apple),
+				new Employee("Joe", microsoft));
 
+		final List<String> uniqueCompanies = getUniqueCompanies(employees);
 
-
-
-
+		if(Arrays.equals(expectedUniqueCompanies.toArray(), uniqueCompanies.toArray()))
+		{
+			System.out.println(getCompletedMessage(6));
+		}
+		else
+		{
+			throw (new Exception(getErrorMessage(5)));
+		}
 
 		/** ============================================================================= */
 		/** ============================================================================= */
 		/** ============================================================================= */
-
-
-
-
-
 
 
 
@@ -282,44 +195,26 @@ public class Main
 		 * that takes a string and a list of integers using only primitive type parameters
 		 * Using stream, add each of the int in the list and print it out
 		 * Should print "The sum is 21"
-		 * Can you call the Functional interface implemented earlier?
-		 */
+		 * Can you call the Functional interface implemented earlier? **** IGNORE
+ 		 */
 
-//		final String theSumIsString = testVarargs("The sum is ", 1, 2, 3, 4, 5, 6);
-//
-//
-//		if(theSumIsString.equals(expectedString))
-//		{
-//			System.out.println(getCompletedMessage(7));
-//		}
-//		else
-//		{
-//			throw (new Exception(getErrorMessage(7)));
-//		}
+		final String theSumIsString = testVarargs("The sum is ", 1, 2, 3, 4, 5, 6);
+
+
+		if(theSumIsString.equals(expectedString))
+		{
+			System.out.println(getCompletedMessage(7));
+		}
+		else
+		{
+			throw (new Exception(getErrorMessage(7)));
+		}
 
 	}
 
 	/**
 	 * or write your function down here
 	 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 	/**#################
 	  HELPER FUNCTIONS
